@@ -1,6 +1,4 @@
-"use strict";
-
-var sum = function sum(a, b) {
+const sum = (a, b) => {
     console.log(a + b);
 };
 
