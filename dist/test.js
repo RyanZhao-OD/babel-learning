@@ -1,5 +1,21 @@
-const sum = (a, b) => {
-    console.log(a + b);
-};
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define([], factory);
+    } else if (typeof exports !== "undefined") {
+        factory();
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory();
+        global.test = mod.exports;
+    }
+})(this, function () {
+    "use strict";
 
-sum(1, 2);
+    var sum = function sum(a, b) {
+        console.log(a + b);
+    };
+
+    sum(1, 2);
+});
